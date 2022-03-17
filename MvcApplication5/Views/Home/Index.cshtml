@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MvcApplication5.Models.form> 
+@{
+    ViewBag.Title = "Index";
+}
+@Html.ActionLink("Create", "Create", "Home")
+<table border="1px">
+<tr>
+<th>id</th>
+<th>name</th>
+<th colspan="2">Action</th>
+</tr>
+
+@foreach (var i in Model) 
+{ 
+    <tr>
+    <td>@i.id</td>
+    <td>@i.name</td>
+    <td>@Html.ActionLink("Edit", "Edit", "Home", new { id = i.id }, null)</td>
+    <td>@Html.ActionLink("Delete", "Delete", "Home", new { id = i.id }, null)</td>
+    </tr>
+
+}
+</table>
+

@@ -1,0 +1,12 @@
+﻿@model MvcApplication5.Models.form
+@{
+    ViewBag.Title = "Create";
+}
+
+<form method="post" action="@Url.Action("Create","Home")">
+
+@Html.LabelFor(x => x.name)
+@Html.TextBoxFor(x => x.name)
+
+<input type="submit" value="create"/>
+</form>

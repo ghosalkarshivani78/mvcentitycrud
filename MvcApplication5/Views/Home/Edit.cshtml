@@ -1,0 +1,15 @@
+﻿@model MvcApplication5.Models.form
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<form method="post" action="@Url.Action("Edit","Home")">
+@Html.HiddenFor(x => x.id)
+
+@Html.LabelFor(x => x.name)
+@Html.TextBoxFor(x => x.name)
+
+<input type="submit" value="update"/>
+</form>
+
